@@ -18,13 +18,13 @@ import os
 import random
 
 # ── Multiprocessing ────────────────────────────────────────────────────────────
-NUM_WORKERS: int = 4   # keep low to avoid triggering Tiki anti-bot
+NUM_WORKERS: int = 1   # single worker — absolute minimum footprint
 
 # ── Per-worker concurrency ─────────────────────────────────────────────────────
-# Total in-flight  = NUM_WORKERS × MAX_CONCURRENT_REQUESTS  = 4 × 5 = 20
-# Total req/s      = NUM_WORKERS × REQUESTS_PER_SECOND_PER_WORKER = 4 × 5 = 20
-MAX_CONCURRENT_REQUESTS: int  = 5       # asyncio semaphore per worker
-REQUESTS_PER_SECOND_PER_WORKER: float = 5.0   # token-bucket per worker
+# Total in-flight  = 1 × 3 = 3
+# Total req/s      = 1 × 2 = 2 req/s — near human-like browsing speed
+MAX_CONCURRENT_REQUESTS: int  = 3
+REQUESTS_PER_SECOND_PER_WORKER: float = 2.0
 
 # ── HTTP ───────────────────────────────────────────────────────────────────────
 API_BASE_URL: str           = "https://api.tiki.vn/product-detail/api/v1/products/{product_id}"
