@@ -18,37 +18,37 @@ import os
 import random
 
 # ── Multiprocessing ────────────────────────────────────────────────────────────
-NUM_WORKERS: int = 1   # single worker — absolute minimum footprint
+NUM_WORKERS: int = 3   # single worker — absolute minimum footprint
 
 # ── Per-worker concurrency ─────────────────────────────────────────────────────
-# Total in-flight  = 1 × 3 = 3
-# Total req/s      = 1 × 2 = 2 req/s — near human-like browsing speed
-MAX_CONCURRENT_REQUESTS: int  = 3
-REQUESTS_PER_SECOND_PER_WORKER: float = 2.0
+# Total in-flight  = 3 × 3 = 9
+# Total req/s      = 3 × 2 = 6 req/s — near human-like browsing speed
+MAX_CONCURRENT_REQUESTS: int = 9
+REQUESTS_PER_SECOND_PER_WORKER: float = 1.0
 
 # ── HTTP ───────────────────────────────────────────────────────────────────────
-API_BASE_URL: str           = "https://api.tiki.vn/product-detail/api/v1/products/{product_id}"
+API_BASE_URL: str = "https://api.tiki.vn/product-detail/api/v1/products/{product_id}"
 REQUEST_TIMEOUT_SECONDS: int = 15
 
 # ── Retry ──────────────────────────────────────────────────────────────────────
-MAX_RETRIES: int             = 4
-RETRY_BACKOFF_BASE: float    = 2.0      # seconds: 2 → 4 → 8 → 16
-RETRY_ON_STATUS_CODES: set   = {429, 500, 502, 503, 504}
+MAX_RETRIES: int = 5
+RETRY_BACKOFF_BASE: float = 2.0      # seconds: 2 → 4 → 8 → 16
+RETRY_ON_STATUS_CODES: set = {429, 500, 502, 503, 504}
 
 # Backoff when CAPTCHA is detected (seconds)
 CAPTCHA_BACKOFF_SECONDS: float = 10.0
 
 # ── Output ─────────────────────────────────────────────────────────────────────
-OUTPUT_DIR: str              = "output"
-LOGS_DIR: str                = "logs"
-PRODUCTS_PER_FILE: int       = 1_000
+OUTPUT_DIR: str = "output"
+LOGS_DIR: str = "logs"
+PRODUCTS_PER_FILE: int = 1_000
 
 # Per-worker checkpoint + error log (worker index appended at runtime)
-CHECKPOINT_FILE_TPL: str     = "logs/checkpoint_worker_{worker_id}.json"
-ERROR_LOG_FILE_TPL: str      = "logs/errors_worker_{worker_id}.jsonl"
+CHECKPOINT_FILE_TPL: str = "logs/checkpoint_worker_{worker_id}.json"
+ERROR_LOG_FILE_TPL: str = "logs/errors_worker_{worker_id}.jsonl"
 
 # Master merged outputs (written by main process after all workers finish)
-MERGED_ERROR_LOG: str        = "logs/errors.jsonl"
+MERGED_ERROR_LOG: str = "logs/errors.jsonl"
 
 # ── Browser session (copy từ DevTools khi browse tiki.vn bình thường) ──────────
 BROWSER_COOKIE: str = (
@@ -65,6 +65,8 @@ BROWSER_COOKIE: str = (
 GUEST_TOKEN: str = "zx04dhUsAyI6FSHfVLQjgbnlcp2KDZv8"
 
 # ── HTTP headers ───────────────────────────────────────────────────────────────
+
+
 def random_headers() -> dict:
     return {
         "User-Agent":         "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Safari/537.36",
@@ -83,5 +85,6 @@ def random_headers() -> dict:
         "sec-fetch-site":     "same-site",
         "priority":           "u=1, i",
     }
+
 
 REQUEST_HEADERS: dict = random_headers()
