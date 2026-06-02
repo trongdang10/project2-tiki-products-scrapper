@@ -48,6 +48,7 @@ class AsyncBatchWriter:
         self._buffer: list[dict[str, Any]] = []
         self._batch_index   = 0          # filled in by async _init()
         self._checkpoint    = CHECKPOINT_FILE_TPL.format(worker_id=worker_id)
+        self._flush_lock    = asyncio.Lock()   # prevent concurrent flushes
         Path(OUTPUT_DIR).mkdir(parents=True, exist_ok=True)
         Path(self._checkpoint).parent.mkdir(parents=True, exist_ok=True)
 
@@ -75,14 +76,19 @@ class AsyncBatchWriter:
     # ── Internals ──────────────────────────────────────────────────────────────
 
     async def _flush(self) -> None:
-        filename = f"products_batch_w{self._worker_id:02d}_{self._batch_index:04d}.json"
-        path     = Path(OUTPUT_DIR) / filename
-        await _async_atomic_write(path, self._buffer)
-        logger.info("[worker %02d] batch %04d  (%d products) → %s",
-                    self._worker_id, self._batch_index, len(self._buffer), path)
-        await self._save_checkpoint(self._batch_index)
-        self._batch_index += 1
-        self._buffer.clear()
+        async with self._flush_lock:
+            if not self._buffer:   # another coroutine may have already flushed
+                return
+            filename = f"products_batch_w{self._worker_id:02d}_{self._batch_index:04d}.json"
+            path     = Path(OUTPUT_DIR) / filename
+            # Snapshot buffer and clear immediately so other coroutines can keep adding
+            snapshot = list(self._buffer)
+            self._buffer.clear()
+            await _async_atomic_write(path, snapshot)
+            logger.info("[worker %02d] batch %04d  (%d products) → %s",
+                        self._worker_id, self._batch_index, len(snapshot), path)
+            await self._save_checkpoint(self._batch_index)
+            self._batch_index += 1
 
     async def _load_checkpoint(self) -> int:
         cp = Path(self._checkpoint)
@@ -138,7 +144,9 @@ async def _async_atomic_write(path: Path, data: Any) -> None:
         async with aiofiles.open(tmp, "wb") as fh:
             await fh.write(serialized)
             await fh.flush()
-            os.fsync(fh.fileno())
+            # fsync must run in executor — it's a blocking syscall
+            loop = asyncio.get_running_loop()
+            await loop.run_in_executor(None, os.fsync, fh.fileno())
         await aiofiles.os.rename(tmp, path)
     except Exception:
         try:
