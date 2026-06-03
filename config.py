@@ -18,11 +18,11 @@ import os
 import random
 
 # ── Multiprocessing ────────────────────────────────────────────────────────────
-NUM_WORKERS: int = 3   # single worker — absolute minimum footprint
+NUM_WORKERS: int = 4   # single worker — absolute minimum footprint
 
 # ── Per-worker concurrency ─────────────────────────────────────────────────────
-# Total in-flight  = 3 × 3 = 9
-# Total req/s      = 3 × 2 = 6 req/s — near human-like browsing speed
+# Total in-flight  = 4 × 9 = 36
+# Total req/s      = 4 × 1.0 = 4 req/s — near human-like browsing speed
 MAX_CONCURRENT_REQUESTS: int = 9
 REQUESTS_PER_SECOND_PER_WORKER: float = 1.0
 
