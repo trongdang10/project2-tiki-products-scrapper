@@ -179,7 +179,7 @@ async def fetch_product(
             await rate_limiter.acquire()
 
         # Small random jitter to avoid synchronized bursts across coroutines
-        await asyncio.sleep(random.uniform(0.05, 0.3))
+        await asyncio.sleep(random.uniform(0.01, 0.05))
 
         try:
             async with semaphore:
