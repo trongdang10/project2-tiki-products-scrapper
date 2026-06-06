@@ -24,9 +24,28 @@ from concurrent.futures import ProcessPoolExecutor
 from datetime import timedelta
 from typing import Any
 
-from config import MAX_CONCURRENT_REQUESTS
+import orjson
+
+from config import MAX_CONCURRENT_REQUESTS, WORKER_STATS_FILE_TPL
 from downloader import build_rate_limiter, build_session, fetch_product
 from writer import AsyncBatchWriter, AsyncErrorWriter
+
+
+def _write_stats_file(worker_id: int, stats: dict[str, Any]) -> None:
+    """
+    Durably persist this worker's final stats (atomic write).
+    Main reads this file for the summary, so the report survives even if the
+    result queue can't be drained (e.g. main timed out and terminated us late).
+    """
+    import os
+
+    path = WORKER_STATS_FILE_TPL.format(worker_id=worker_id)
+    tmp  = path + ".tmp"
+    with open(tmp, "wb") as fh:
+        fh.write(orjson.dumps(stats, option=orjson.OPT_INDENT_2))
+        fh.flush()
+        os.fsync(fh.fileno())
+    os.replace(tmp, path)
 
 
 def _setup_logging(worker_id: int) -> None:
@@ -108,6 +127,8 @@ async def _run_worker(
         "batches_written": batch_writer.batches_written,
         "elapsed_s":      round(elapsed, 2),
     }
+    # Durable record first, then best-effort queue notification.
+    _write_stats_file(worker_id, stats)
     result_queue.put(stats)
     logger.info("Done — success=%d errors=%d elapsed=%s",
                 success, errors, str(timedelta(seconds=int(elapsed))))

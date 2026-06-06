@@ -1,0 +1,20 @@
+# ── Python ──────────────────────────────────────────────
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+env/
+
+# ── OS / editor ─────────────────────────────────────────
+.DS_Store
+.vscode/
+.idea/
+
+# ── Scraper runtime artifacts ───────────────────────────
+# Logs can balloon to hundreds of MB — never commit them
+# (a >100MB file blocked GitHub pushes before).
+logs/
+*.tmp
+
+# NOTE: output/ is intentionally tracked — product data is synced to GitHub.

@@ -26,6 +26,7 @@ import json
 import logging
 import multiprocessing
 import os
+import queue as _queue
 import sys
 import time
 from datetime import timedelta
@@ -41,6 +42,8 @@ from config import (
     NUM_WORKERS,
     OUTPUT_DIR,
     PRODUCTS_PER_FILE,
+    RUN_DEADLINE_SECONDS,
+    WORKER_STATS_FILE_TPL,
 )
 from worker import run_worker
 
@@ -133,6 +136,81 @@ def _merge_error_logs(num_workers: int) -> int:
                     total_errors += 1
     logger.info("Merged error logs → %s  (%d errors total)", merged, total_errors)
     return total_errors
+
+
+# ── Stats collection (robust against interrupted/terminated workers) ──────────
+
+def _drain_queue(q: multiprocessing.Queue, into: dict[int, dict[str, Any]]) -> None:
+    """Non-blocking: pull every stats dict currently in the queue."""
+    try:
+        while True:
+            s = q.get_nowait()
+            into[s["worker_id"]] = s
+    except _queue.Empty:
+        pass
+
+
+def _read_stats_file(worker_id: int) -> dict[str, Any] | None:
+    """Read a worker's durable stats file, if it finished and wrote one."""
+    path = Path(WORKER_STATS_FILE_TPL.format(worker_id=worker_id))
+    if not path.exists():
+        return None
+    try:
+        return orjson.loads(path.read_bytes())
+    except Exception:
+        return None
+
+
+def _disk_fallback_stats(worker_id: int) -> dict[str, Any] | None:
+    """
+    Last resort for a worker that was killed before reporting: reconstruct
+    its numbers straight from disk. Success is exact (counts products actually
+    written); errors are best-effort (the append-only error log may include
+    retries / earlier runs).
+    """
+    success, batches = 0, 0
+    for f in Path(OUTPUT_DIR).glob(f"products_batch_w{worker_id:02d}_*.json"):
+        try:
+            success += len(orjson.loads(f.read_bytes()))
+            batches += 1
+        except Exception:
+            pass
+
+    errors = 0
+    err_log = Path(f"logs/errors_worker_{worker_id}.jsonl")
+    if err_log.exists():
+        errors = sum(1 for line in err_log.read_text(encoding="utf-8").splitlines()
+                     if line.strip())
+
+    if success == 0 and errors == 0:
+        return None
+    return {
+        "worker_id":       worker_id,
+        "total":           success + errors,
+        "success":         success,
+        "errors":          errors,
+        "batches_written": batches,
+        "elapsed_s":       0,
+        "_source":         "disk-fallback (worker interrupted)",
+    }
+
+
+def _collect_final_stats(
+    num_workers: int,
+    queue_stats: dict[int, dict[str, Any]],
+) -> list[dict[str, Any]]:
+    """
+    Authoritative stats per worker, preferring the most reliable source:
+      1. durable stats file  (worker finished cleanly)
+      2. queue report        (worker reported, file missing)
+      3. disk fallback       (worker killed — reconstruct from output)
+    """
+    stats: list[dict[str, Any]] = []
+    for w in range(num_workers):
+        s = _read_stats_file(w) or queue_stats.get(w) or _disk_fallback_stats(w)
+        if s is not None:
+            stats.append(s)
+    return stats
 
 
 # ── Summary printer ────────────────────────────────────────────────────────────
@@ -232,26 +310,47 @@ def main(argv: list[str] | None = None) -> None:
         if worker_id < len(partitions) - 1:
             time.sleep(3)
 
-    # Collect results
-    all_stats: list[dict[str, Any]] = []
-    for _ in processes:
-        try:
-            stats = result_queue.get(timeout=7200)   # 2-hour safety timeout
-            all_stats.append(stats)
-        except Exception as exc:
-            logger.error("Worker did not report back: %s", exc)
+    # ── Wait for workers ──────────────────────────────────────────────────────
+    # Poll liveness and drain the queue opportunistically. We let workers run to
+    # completion (a healthy worker is making progress); we only force-terminate
+    # if the WHOLE run blows past RUN_DEADLINE_SECONDS — never just because a
+    # fixed per-get timeout elapsed while workers were still working fine.
+    queue_stats: dict[int, dict[str, Any]] = {}
+    deadline = wall_start + RUN_DEADLINE_SECONDS
+    while any(p.is_alive() for p in processes):
+        _drain_queue(result_queue, queue_stats)
+        if time.monotonic() > deadline:
+            logger.warning("Run deadline (%ds) exceeded — terminating workers",
+                           RUN_DEADLINE_SECONDS)
+            for p in processes:
+                if p.is_alive():
+                    p.terminate()
+            break
+        time.sleep(5)
 
-    # Wait for all processes to exit cleanly
+    # Final drain + clean join
+    _drain_queue(result_queue, queue_stats)
     for p in processes:
         p.join(timeout=30)
         if p.is_alive():
             logger.warning("Worker %s did not exit — terminating", p.name)
             p.terminate()
 
+    # Stop the queue's feeder thread from blocking interpreter shutdown
+    # (the classic multiprocessing "hangs on exit" trap after terminate()).
+    result_queue.cancel_join_thread()
+
     wall_elapsed = time.monotonic() - wall_start
 
     # Merge per-worker error logs
     _merge_error_logs(num_workers)
+
+    # Build the summary from the most reliable source per worker:
+    # durable stats file → queue report → on-disk reconstruction.
+    all_stats = _collect_final_stats(num_workers, queue_stats)
+    if any(s.get("_source") for s in all_stats):
+        logger.warning("Some workers were interrupted — their numbers are "
+                       "reconstructed from disk (success exact, errors approximate).")
 
     _print_summary(all_stats, len(product_ids), wall_elapsed)
 
