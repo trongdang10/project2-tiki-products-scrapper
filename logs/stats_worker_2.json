@@ -1,0 +1,8 @@
+{
+  "worker_id": 2,
+  "total": 31161,
+  "success": 6473,
+  "errors": 24688,
+  "batches_written": 37,
+  "elapsed_s": 15606.6
+}

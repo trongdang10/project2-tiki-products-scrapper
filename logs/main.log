@@ -1,0 +1,327 @@
+2026-06-01 18:19:55,206  MAIN  INFO      Loaded 200000 product IDs from products-0-200000.csv
+2026-06-01 18:19:55,211  MAIN  INFO      Resume: 515 products already fetched — skipping
+2026-06-01 18:19:55,214  MAIN  INFO      After dedup: 199485 IDs remain to fetch
+2026-06-01 18:19:55,219  MAIN  INFO      Starting  total=199485  workers=4  ~49871 IDs/worker
+2026-06-01 18:19:55,305  MAIN  INFO      Spawned worker 00  (49872 IDs)
+2026-06-01 18:19:55,406  MAIN  INFO      Spawned worker 01  (49871 IDs)
+2026-06-01 18:19:55,522  MAIN  INFO      Spawned worker 02  (49871 IDs)
+2026-06-01 18:19:55,649  MAIN  INFO      Spawned worker 03  (49871 IDs)
+2026-06-01 18:22:07,582  MAIN  INFO      Loaded 200000 product IDs from products-0-200000.csv
+2026-06-01 18:22:07,588  MAIN  INFO      Resume: 515 products already fetched — skipping
+2026-06-01 18:22:07,591  MAIN  INFO      After dedup: 199485 IDs remain to fetch
+2026-06-01 18:22:07,596  MAIN  INFO      Starting  total=199485  workers=4  ~49871 IDs/worker
+2026-06-01 18:22:07,681  MAIN  INFO      Spawned worker 00  (49872 IDs)
+2026-06-01 18:22:10,797  MAIN  INFO      Spawned worker 01  (49871 IDs)
+2026-06-01 18:22:13,907  MAIN  INFO      Spawned worker 02  (49871 IDs)
+2026-06-01 18:22:17,025  MAIN  INFO      Spawned worker 03  (49871 IDs)
+2026-06-01 19:02:07,648  MAIN  INFO      Loaded 200000 product IDs from products-0-200000.csv
+2026-06-01 19:02:07,731  MAIN  INFO      Resume: 12516 products already fetched — skipping
+2026-06-01 19:02:07,735  MAIN  INFO      After dedup: 187484 IDs remain to fetch
+2026-06-01 19:02:07,739  MAIN  INFO      Starting  total=187484  workers=4  ~46871 IDs/worker
+2026-06-01 19:02:07,826  MAIN  INFO      Spawned worker 00  (46871 IDs)
+2026-06-01 19:02:10,955  MAIN  INFO      Spawned worker 01  (46871 IDs)
+2026-06-01 19:02:14,089  MAIN  INFO      Spawned worker 02  (46871 IDs)
+2026-06-01 19:02:17,217  MAIN  INFO      Spawned worker 03  (46871 IDs)
+2026-06-01 19:24:43,266  MAIN  INFO      Loaded 200000 product IDs from products-0-200000.csv
+2026-06-01 19:24:43,363  MAIN  INFO      Resume: 12516 products already fetched — skipping
+2026-06-01 19:24:43,367  MAIN  INFO      After dedup: 187484 IDs remain to fetch
+2026-06-01 19:24:43,373  MAIN  INFO      Starting  total=187484  workers=4  ~46871 IDs/worker
+2026-06-01 19:24:43,469  MAIN  INFO      Spawned worker 00  (46871 IDs)
+2026-06-01 19:24:46,602  MAIN  INFO      Spawned worker 01  (46871 IDs)
+2026-06-01 19:24:49,731  MAIN  INFO      Spawned worker 02  (46871 IDs)
+2026-06-01 19:24:52,862  MAIN  INFO      Spawned worker 03  (46871 IDs)
+2026-06-02 10:34:48,368  MAIN  INFO      Loaded 200000 product IDs from products-0-200000.csv
+2026-06-02 10:34:48,458  MAIN  INFO      Resume: 12516 products already fetched — skipping
+2026-06-02 10:34:48,462  MAIN  INFO      After dedup: 187484 IDs remain to fetch
+2026-06-02 10:34:48,468  MAIN  INFO      Starting  total=187484  workers=1  ~187484 IDs/worker
+2026-06-02 10:34:48,568  MAIN  INFO      Spawned worker 00  (187484 IDs)
+2026-06-02 10:35:30,364  MAIN  INFO      Loaded 200000 product IDs from products-0-200000.csv
+2026-06-02 10:35:30,449  MAIN  INFO      Resume: 12516 products already fetched — skipping
+2026-06-02 10:35:30,453  MAIN  INFO      After dedup: 187484 IDs remain to fetch
+2026-06-02 10:35:30,458  MAIN  INFO      Starting  total=187484  workers=1  ~187484 IDs/worker
+2026-06-02 10:35:30,548  MAIN  INFO      Spawned worker 00  (187484 IDs)
+2026-06-02 10:37:51,723  MAIN  INFO      Loaded 200000 product IDs from products-0-200000.csv
+2026-06-02 10:37:51,807  MAIN  INFO      Resume: 12516 products already fetched — skipping
+2026-06-02 10:37:51,811  MAIN  INFO      After dedup: 187484 IDs remain to fetch
+2026-06-02 10:37:51,816  MAIN  INFO      Starting  total=187484  workers=3  ~62494 IDs/worker
+2026-06-02 10:37:51,902  MAIN  INFO      Spawned worker 00  (62495 IDs)
+2026-06-02 10:37:55,034  MAIN  INFO      Spawned worker 01  (62495 IDs)
+2026-06-02 10:37:58,167  MAIN  INFO      Spawned worker 02  (62494 IDs)
+2026-06-02 11:20:45,779  MAIN  INFO      Loaded 200000 product IDs from products-0-200000.csv
+2026-06-02 11:20:45,914  MAIN  INFO      Resume: 19517 products already fetched — skipping
+2026-06-02 11:20:45,919  MAIN  INFO      After dedup: 180483 IDs remain to fetch
+2026-06-02 11:20:45,924  MAIN  INFO      Starting  total=180483  workers=3  ~60161 IDs/worker
+2026-06-02 11:20:46,017  MAIN  INFO      Spawned worker 00  (60161 IDs)
+2026-06-02 11:20:49,143  MAIN  INFO      Spawned worker 01  (60161 IDs)
+2026-06-02 11:20:52,263  MAIN  INFO      Spawned worker 02  (60161 IDs)
+2026-06-02 13:39:36,553  MAIN  INFO      Loaded 200000 product IDs from products-0-200000.csv
+2026-06-02 13:39:36,780  MAIN  INFO      Resume: 34517 products already fetched — skipping
+2026-06-02 13:39:36,784  MAIN  INFO      After dedup: 165483 IDs remain to fetch
+2026-06-02 13:39:36,790  MAIN  INFO      Starting  total=165483  workers=4  ~41370 IDs/worker
+2026-06-02 13:39:36,879  MAIN  INFO      Spawned worker 00  (41371 IDs)
+2026-06-02 13:39:40,010  MAIN  INFO      Spawned worker 01  (41371 IDs)
+2026-06-02 13:39:43,128  MAIN  INFO      Spawned worker 02  (41371 IDs)
+2026-06-02 13:39:46,256  MAIN  INFO      Spawned worker 03  (41370 IDs)
+2026-06-02 13:41:58,087  MAIN  INFO      Loaded 200000 product IDs from products-0-200000.csv
+2026-06-02 13:41:58,328  MAIN  INFO      Resume: 34517 products already fetched — skipping
+2026-06-02 13:41:58,333  MAIN  INFO      After dedup: 165483 IDs remain to fetch
+2026-06-02 13:41:58,339  MAIN  INFO      Starting  total=165483  workers=3  ~55161 IDs/worker
+2026-06-02 13:41:58,428  MAIN  INFO      Spawned worker 00  (55161 IDs)
+2026-06-02 13:42:01,546  MAIN  INFO      Spawned worker 01  (55161 IDs)
+2026-06-02 13:42:04,673  MAIN  INFO      Spawned worker 02  (55161 IDs)
+2026-06-02 13:58:02,963  MAIN  INFO      Loaded 200000 product IDs from products-0-200000.csv
+2026-06-02 13:58:03,201  MAIN  INFO      Resume: 34517 products already fetched — skipping
+2026-06-02 13:58:03,205  MAIN  INFO      After dedup: 165483 IDs remain to fetch
+2026-06-02 13:58:03,210  MAIN  INFO      Starting  total=165483  workers=3  ~55161 IDs/worker
+2026-06-02 13:58:03,303  MAIN  INFO      Spawned worker 00  (55161 IDs)
+2026-06-02 13:58:06,423  MAIN  INFO      Spawned worker 01  (55161 IDs)
+2026-06-02 13:58:09,555  MAIN  INFO      Spawned worker 02  (55161 IDs)
+2026-06-02 14:35:55,783  MAIN  INFO      Loaded 200000 product IDs from products-0-200000.csv
+2026-06-02 14:35:56,021  MAIN  INFO      Resume: 34517 products already fetched — skipping
+2026-06-02 14:35:56,026  MAIN  INFO      After dedup: 165483 IDs remain to fetch
+2026-06-02 14:35:56,032  MAIN  INFO      Starting  total=165483  workers=3  ~55161 IDs/worker
+2026-06-02 14:35:56,125  MAIN  INFO      Spawned worker 00  (55161 IDs)
+2026-06-02 14:35:59,256  MAIN  INFO      Spawned worker 01  (55161 IDs)
+2026-06-02 14:36:02,380  MAIN  INFO      Spawned worker 02  (55161 IDs)
+2026-06-02 15:48:51,832  MAIN  INFO      Loaded 200000 product IDs from products-0-200000.csv
+2026-06-02 15:48:52,062  MAIN  INFO      Resume: 34517 products already fetched — skipping
+2026-06-02 15:48:52,066  MAIN  INFO      After dedup: 165483 IDs remain to fetch
+2026-06-02 15:48:52,072  MAIN  INFO      Starting  total=165483  workers=3  ~55161 IDs/worker
+2026-06-02 15:48:52,166  MAIN  INFO      Spawned worker 00  (55161 IDs)
+2026-06-02 15:48:55,268  MAIN  INFO      Spawned worker 01  (55161 IDs)
+2026-06-02 15:48:58,393  MAIN  INFO      Spawned worker 02  (55161 IDs)
+2026-06-02 15:50:54,483  MAIN  INFO      Loaded 200000 product IDs from products-0-200000.csv
+2026-06-02 15:50:54,710  MAIN  INFO      Resume: 34517 products already fetched — skipping
+2026-06-02 15:50:54,714  MAIN  INFO      After dedup: 165483 IDs remain to fetch
+2026-06-02 15:50:54,718  MAIN  INFO      Starting  total=165483  workers=3  ~55161 IDs/worker
+2026-06-02 15:50:54,807  MAIN  INFO      Spawned worker 00  (55161 IDs)
+2026-06-02 15:50:57,929  MAIN  INFO      Spawned worker 01  (55161 IDs)
+2026-06-02 15:51:01,056  MAIN  INFO      Spawned worker 02  (55161 IDs)
+2026-06-03 13:01:12,872  MAIN  INFO      Loaded 200000 product IDs from products-0-200000.csv
+2026-06-03 13:01:13,112  MAIN  INFO      Resume: 34517 products already fetched — skipping
+2026-06-03 13:01:13,116  MAIN  INFO      After dedup: 165483 IDs remain to fetch
+2026-06-03 13:01:13,133  MAIN  INFO      Starting  total=165483  workers=3  ~55161 IDs/worker
+2026-06-03 13:01:13,235  MAIN  INFO      Spawned worker 00  (55161 IDs)
+2026-06-03 13:01:16,363  MAIN  INFO      Spawned worker 01  (55161 IDs)
+2026-06-03 13:01:19,480  MAIN  INFO      Spawned worker 02  (55161 IDs)
+2026-06-03 13:03:12,277  MAIN  INFO      Loaded 200000 product IDs from products-0-200000.csv
+2026-06-03 13:03:12,501  MAIN  INFO      Resume: 34517 products already fetched — skipping
+2026-06-03 13:03:12,505  MAIN  INFO      After dedup: 165483 IDs remain to fetch
+2026-06-03 13:03:12,511  MAIN  INFO      Starting  total=165483  workers=3  ~55161 IDs/worker
+2026-06-03 13:03:12,599  MAIN  INFO      Spawned worker 00  (55161 IDs)
+2026-06-03 13:03:15,720  MAIN  INFO      Spawned worker 01  (55161 IDs)
+2026-06-03 13:03:18,823  MAIN  INFO      Spawned worker 02  (55161 IDs)
+2026-06-03 13:26:07,417  MAIN  INFO      Loaded 200000 product IDs from products-0-200000.csv
+2026-06-03 13:26:07,660  MAIN  INFO      Resume: 34517 products already fetched — skipping
+2026-06-03 13:26:07,664  MAIN  INFO      After dedup: 165483 IDs remain to fetch
+2026-06-03 13:26:07,670  MAIN  INFO      Starting  total=165483  workers=4  ~41370 IDs/worker
+2026-06-03 13:26:07,772  MAIN  INFO      Spawned worker 00  (41371 IDs)
+2026-06-03 13:26:10,901  MAIN  INFO      Spawned worker 01  (41371 IDs)
+2026-06-03 13:26:14,031  MAIN  INFO      Spawned worker 02  (41371 IDs)
+2026-06-03 13:26:17,160  MAIN  INFO      Spawned worker 03  (41370 IDs)
+2026-06-03 14:03:22,036  MAIN  INFO      Loaded 200000 product IDs from products-0-200000.csv
+2026-06-03 14:03:22,280  MAIN  INFO      Resume: 34517 products already fetched — skipping
+2026-06-03 14:03:22,284  MAIN  INFO      After dedup: 165483 IDs remain to fetch
+2026-06-03 14:03:22,290  MAIN  INFO      Starting  total=165483  workers=3  ~55161 IDs/worker
+2026-06-03 14:03:22,392  MAIN  INFO      Spawned worker 00  (55161 IDs)
+2026-06-03 14:03:25,508  MAIN  INFO      Spawned worker 01  (55161 IDs)
+2026-06-03 14:03:28,640  MAIN  INFO      Spawned worker 02  (55161 IDs)
+2026-06-03 14:04:03,991  MAIN  INFO      Loaded 200000 product IDs from products-0-200000.csv
+2026-06-03 14:04:04,229  MAIN  INFO      Resume: 34517 products already fetched — skipping
+2026-06-03 14:04:04,234  MAIN  INFO      After dedup: 165483 IDs remain to fetch
+2026-06-03 14:04:04,239  MAIN  INFO      Starting  total=165483  workers=3  ~55161 IDs/worker
+2026-06-03 14:04:04,329  MAIN  INFO      Spawned worker 00  (55161 IDs)
+2026-06-03 14:04:07,458  MAIN  INFO      Spawned worker 01  (55161 IDs)
+2026-06-03 14:04:10,577  MAIN  INFO      Spawned worker 02  (55161 IDs)
+2026-06-03 14:47:12,829  MAIN  INFO      Loaded 200000 product IDs from products-0-200000.csv
+2026-06-03 14:47:13,071  MAIN  INFO      Resume: 35517 products already fetched — skipping
+2026-06-03 14:47:13,075  MAIN  INFO      After dedup: 164483 IDs remain to fetch
+2026-06-03 14:47:13,081  MAIN  INFO      Starting  total=164483  workers=3  ~54827 IDs/worker
+2026-06-03 14:47:13,171  MAIN  INFO      Spawned worker 00  (54828 IDs)
+2026-06-03 14:47:16,299  MAIN  INFO      Spawned worker 01  (54828 IDs)
+2026-06-03 14:47:19,426  MAIN  INFO      Spawned worker 02  (54827 IDs)
+2026-06-03 14:53:38,346  MAIN  INFO      Loaded 200000 product IDs from products-0-200000.csv
+2026-06-03 14:53:38,589  MAIN  INFO      Resume: 35517 products already fetched — skipping
+2026-06-03 14:53:38,593  MAIN  INFO      After dedup: 164483 IDs remain to fetch
+2026-06-03 14:53:38,599  MAIN  INFO      Starting  total=164483  workers=3  ~54827 IDs/worker
+2026-06-03 14:53:38,688  MAIN  INFO      Spawned worker 00  (54828 IDs)
+2026-06-03 14:53:41,810  MAIN  INFO      Spawned worker 01  (54828 IDs)
+2026-06-03 14:53:44,945  MAIN  INFO      Spawned worker 02  (54827 IDs)
+2026-06-03 14:55:32,685  MAIN  INFO      Loaded 200000 product IDs from products-0-200000.csv
+2026-06-03 14:55:32,943  MAIN  INFO      Resume: 35517 products already fetched — skipping
+2026-06-03 14:55:32,947  MAIN  INFO      After dedup: 164483 IDs remain to fetch
+2026-06-03 14:55:32,954  MAIN  INFO      Starting  total=164483  workers=4  ~41120 IDs/worker
+2026-06-03 14:55:33,047  MAIN  INFO      Spawned worker 00  (41121 IDs)
+2026-06-03 14:55:36,166  MAIN  INFO      Spawned worker 01  (41121 IDs)
+2026-06-03 14:55:39,300  MAIN  INFO      Spawned worker 02  (41121 IDs)
+2026-06-03 18:51:22,145  MAIN  INFO      Loaded 200000 product IDs from products-0-200000.csv
+2026-06-03 18:51:22,396  MAIN  INFO      Resume: 35517 products already fetched — skipping
+2026-06-03 18:51:22,401  MAIN  INFO      After dedup: 164483 IDs remain to fetch
+2026-06-03 18:51:22,414  MAIN  INFO      Starting  total=164483  workers=4  ~41120 IDs/worker
+2026-06-03 18:51:22,505  MAIN  INFO      Spawned worker 00  (41121 IDs)
+2026-06-03 18:51:25,632  MAIN  INFO      Spawned worker 01  (41121 IDs)
+2026-06-03 18:51:28,760  MAIN  INFO      Spawned worker 02  (41121 IDs)
+2026-06-03 18:51:31,885  MAIN  INFO      Spawned worker 03  (41120 IDs)
+2026-06-03 18:52:20,728  MAIN  INFO      Loaded 200000 product IDs from products-0-200000.csv
+2026-06-03 18:52:20,964  MAIN  INFO      Resume: 35517 products already fetched — skipping
+2026-06-03 18:52:20,969  MAIN  INFO      After dedup: 164483 IDs remain to fetch
+2026-06-03 18:52:20,974  MAIN  INFO      Starting  total=164483  workers=4  ~41120 IDs/worker
+2026-06-03 18:52:21,063  MAIN  INFO      Spawned worker 00  (41121 IDs)
+2026-06-03 18:52:24,189  MAIN  INFO      Spawned worker 01  (41121 IDs)
+2026-06-03 18:52:27,312  MAIN  INFO      Spawned worker 02  (41121 IDs)
+2026-06-03 18:52:30,439  MAIN  INFO      Spawned worker 03  (41120 IDs)
+2026-06-03 18:53:50,013  MAIN  INFO      Loaded 200000 product IDs from products-0-200000.csv
+2026-06-03 18:53:50,256  MAIN  INFO      Resume: 35517 products already fetched — skipping
+2026-06-03 18:53:50,259  MAIN  INFO      After dedup: 164483 IDs remain to fetch
+2026-06-03 18:53:50,265  MAIN  INFO      Starting  total=164483  workers=3  ~54827 IDs/worker
+2026-06-03 18:53:50,354  MAIN  INFO      Spawned worker 00  (54828 IDs)
+2026-06-03 18:53:53,461  MAIN  INFO      Spawned worker 01  (54828 IDs)
+2026-06-03 19:06:42,022  MAIN  INFO      Loaded 200000 product IDs from products-0-200000.csv
+2026-06-03 19:06:42,273  MAIN  INFO      Resume: 35517 products already fetched — skipping
+2026-06-03 19:06:42,277  MAIN  INFO      After dedup: 164483 IDs remain to fetch
+2026-06-03 19:06:42,283  MAIN  INFO      Starting  total=164483  workers=3  ~54827 IDs/worker
+2026-06-03 19:06:42,372  MAIN  INFO      Spawned worker 00  (54828 IDs)
+2026-06-03 19:06:45,497  MAIN  INFO      Spawned worker 01  (54828 IDs)
+2026-06-03 19:06:48,619  MAIN  INFO      Spawned worker 02  (54827 IDs)
+2026-06-03 20:34:10,960  MAIN  INFO      Loaded 200000 product IDs from products-0-200000.csv
+2026-06-03 20:34:11,201  MAIN  INFO      Resume: 35517 products already fetched — skipping
+2026-06-03 20:34:11,205  MAIN  INFO      After dedup: 164483 IDs remain to fetch
+2026-06-03 20:34:11,211  MAIN  INFO      Starting  total=164483  workers=3  ~54827 IDs/worker
+2026-06-03 20:34:11,301  MAIN  INFO      Spawned worker 00  (54828 IDs)
+2026-06-03 20:34:14,428  MAIN  INFO      Spawned worker 01  (54828 IDs)
+2026-06-03 20:34:17,541  MAIN  INFO      Spawned worker 02  (54827 IDs)
+2026-06-04 17:42:41,626  MAIN  INFO      Loaded 200000 product IDs from products-0-200000.csv
+2026-06-04 17:42:41,924  MAIN  INFO      Resume: 42517 products already fetched — skipping
+2026-06-04 17:42:41,928  MAIN  INFO      After dedup: 157483 IDs remain to fetch
+2026-06-04 17:42:41,936  MAIN  INFO      Starting  total=157483  workers=3  ~52494 IDs/worker
+2026-06-04 17:42:42,029  MAIN  INFO      Spawned worker 00  (52495 IDs)
+2026-06-04 17:42:45,159  MAIN  INFO      Spawned worker 01  (52494 IDs)
+2026-06-04 17:42:48,290  MAIN  INFO      Spawned worker 02  (52494 IDs)
+2026-06-04 17:46:18,873  MAIN  INFO      Loaded 200000 product IDs from products-0-200000.csv
+2026-06-04 17:46:19,178  MAIN  INFO      Resume: 42517 products already fetched — skipping
+2026-06-04 17:46:19,182  MAIN  INFO      After dedup: 157483 IDs remain to fetch
+2026-06-04 17:46:19,188  MAIN  INFO      Starting  total=157483  workers=3  ~52494 IDs/worker
+2026-06-04 17:46:19,304  MAIN  INFO      Spawned worker 00  (52495 IDs)
+2026-06-04 17:46:22,434  MAIN  INFO      Spawned worker 01  (52494 IDs)
+2026-06-04 18:06:57,046  MAIN  INFO      Loaded 200000 product IDs from products-0-200000.csv
+2026-06-04 18:06:57,354  MAIN  INFO      Resume: 42517 products already fetched — skipping
+2026-06-04 18:06:57,358  MAIN  INFO      After dedup: 157483 IDs remain to fetch
+2026-06-04 18:06:57,364  MAIN  INFO      Starting  total=157483  workers=3  ~52494 IDs/worker
+2026-06-04 18:06:57,458  MAIN  INFO      Spawned worker 00  (52495 IDs)
+2026-06-04 18:07:00,579  MAIN  INFO      Spawned worker 01  (52494 IDs)
+2026-06-04 18:07:03,705  MAIN  INFO      Spawned worker 02  (52494 IDs)
+2026-06-04 18:07:33,610  MAIN  INFO      Loaded 200000 product IDs from products-0-200000.csv
+2026-06-04 18:07:33,882  MAIN  INFO      Resume: 42517 products already fetched — skipping
+2026-06-04 18:07:33,886  MAIN  INFO      After dedup: 157483 IDs remain to fetch
+2026-06-04 18:07:33,897  MAIN  INFO      Starting  total=157483  workers=3  ~52494 IDs/worker
+2026-06-04 18:07:33,985  MAIN  INFO      Spawned worker 00  (52495 IDs)
+2026-06-04 18:07:37,114  MAIN  INFO      Spawned worker 01  (52494 IDs)
+2026-06-04 18:07:40,249  MAIN  INFO      Spawned worker 02  (52494 IDs)
+2026-06-04 18:18:10,033  MAIN  INFO      Loaded 200000 product IDs from products-0-200000.csv
+2026-06-04 18:18:10,346  MAIN  INFO      Resume: 42517 products already fetched — skipping
+2026-06-04 18:18:10,351  MAIN  INFO      After dedup: 157483 IDs remain to fetch
+2026-06-04 18:18:10,357  MAIN  INFO      Starting  total=157483  workers=3  ~52494 IDs/worker
+2026-06-04 18:18:10,459  MAIN  INFO      Spawned worker 00  (52495 IDs)
+2026-06-04 18:18:23,447  MAIN  INFO      Loaded 200000 product IDs from products-0-200000.csv
+2026-06-04 18:18:23,697  MAIN  INFO      Resume: 42517 products already fetched — skipping
+2026-06-04 18:18:23,701  MAIN  INFO      After dedup: 157483 IDs remain to fetch
+2026-06-04 18:18:23,706  MAIN  INFO      Starting  total=157483  workers=3  ~52494 IDs/worker
+2026-06-04 18:18:23,791  MAIN  INFO      Spawned worker 00  (52495 IDs)
+2026-06-04 18:24:15,164  MAIN  INFO      Loaded 200000 product IDs from products-0-200000.csv
+2026-06-04 18:24:15,478  MAIN  INFO      Resume: 42517 products already fetched — skipping
+2026-06-04 18:24:15,482  MAIN  INFO      After dedup: 157483 IDs remain to fetch
+2026-06-04 18:24:15,489  MAIN  INFO      Starting  total=157483  workers=3  ~52494 IDs/worker
+2026-06-04 18:24:15,584  MAIN  INFO      Spawned worker 00  (52495 IDs)
+2026-06-04 18:24:18,709  MAIN  INFO      Spawned worker 01  (52494 IDs)
+2026-06-04 18:24:21,834  MAIN  INFO      Spawned worker 02  (52494 IDs)
+2026-06-04 19:09:25,949  MAIN  INFO      Loaded 200000 product IDs from products-0-200000.csv
+2026-06-04 19:09:26,264  MAIN  INFO      Resume: 42517 products already fetched — skipping
+2026-06-04 19:09:26,268  MAIN  INFO      After dedup: 157483 IDs remain to fetch
+2026-06-04 19:09:26,274  MAIN  INFO      Starting  total=157483  workers=3  ~52494 IDs/worker
+2026-06-04 19:09:26,383  MAIN  INFO      Spawned worker 00  (52495 IDs)
+2026-06-04 19:09:29,520  MAIN  INFO      Spawned worker 01  (52494 IDs)
+2026-06-04 19:13:22,450  MAIN  INFO      Loaded 200000 product IDs from products-0-200000.csv
+2026-06-04 19:13:22,745  MAIN  INFO      Resume: 42517 products already fetched — skipping
+2026-06-04 19:13:22,750  MAIN  INFO      After dedup: 157483 IDs remain to fetch
+2026-06-04 19:13:22,756  MAIN  INFO      Starting  total=157483  workers=3  ~52494 IDs/worker
+2026-06-04 19:13:22,848  MAIN  INFO      Spawned worker 00  (52495 IDs)
+2026-06-04 19:13:25,978  MAIN  INFO      Spawned worker 01  (52494 IDs)
+2026-06-04 19:15:21,258  MAIN  INFO      Loaded 200000 product IDs from products-0-200000.csv
+2026-06-04 19:15:21,541  MAIN  INFO      Resume: 42517 products already fetched — skipping
+2026-06-04 19:15:21,545  MAIN  INFO      After dedup: 157483 IDs remain to fetch
+2026-06-04 19:15:21,551  MAIN  INFO      Starting  total=157483  workers=3  ~52494 IDs/worker
+2026-06-04 19:15:21,643  MAIN  INFO      Spawned worker 00  (52495 IDs)
+2026-06-04 19:15:24,770  MAIN  INFO      Spawned worker 01  (52494 IDs)
+2026-06-04 19:15:27,893  MAIN  INFO      Spawned worker 02  (52494 IDs)
+2026-06-04 19:43:53,485  MAIN  INFO      Loaded 200000 product IDs from products-0-200000.csv
+2026-06-04 19:43:53,787  MAIN  INFO      Resume: 42517 products already fetched — skipping
+2026-06-04 19:43:53,791  MAIN  INFO      After dedup: 157483 IDs remain to fetch
+2026-06-04 19:43:53,798  MAIN  INFO      Starting  total=157483  workers=3  ~52494 IDs/worker
+2026-06-04 19:43:53,895  MAIN  INFO      Spawned worker 00  (52495 IDs)
+2026-06-04 19:43:57,015  MAIN  INFO      Spawned worker 01  (52494 IDs)
+2026-06-04 19:44:00,154  MAIN  INFO      Spawned worker 02  (52494 IDs)
+2026-06-04 19:48:50,655  MAIN  INFO      Loaded 200000 product IDs from products-0-200000.csv
+2026-06-04 19:48:50,960  MAIN  INFO      Resume: 42517 products already fetched — skipping
+2026-06-04 19:48:50,964  MAIN  INFO      After dedup: 157483 IDs remain to fetch
+2026-06-04 19:48:50,971  MAIN  INFO      Starting  total=157483  workers=3  ~52494 IDs/worker
+2026-06-04 19:48:51,065  MAIN  INFO      Spawned worker 00  (52495 IDs)
+2026-06-04 19:48:54,187  MAIN  INFO      Spawned worker 01  (52494 IDs)
+2026-06-04 19:48:57,311  MAIN  INFO      Spawned worker 02  (52494 IDs)
+2026-06-06 13:43:54,418  MAIN  INFO      Loaded 200000 product IDs from products-0-200000.csv
+2026-06-06 13:43:54,666  MAIN  INFO      Resume: 42517 products already fetched — skipping
+2026-06-06 13:43:54,670  MAIN  INFO      After dedup: 157483 IDs remain to fetch
+2026-06-06 13:43:54,676  MAIN  INFO      Starting  total=157483  workers=3  ~52494 IDs/worker
+2026-06-06 13:43:54,766  MAIN  INFO      Spawned worker 00  (52495 IDs)
+2026-06-06 13:43:57,888  MAIN  INFO      Spawned worker 01  (52494 IDs)
+2026-06-06 13:44:01,016  MAIN  INFO      Spawned worker 02  (52494 IDs)
+2026-06-06 14:10:12,205  MAIN  INFO      Loaded 200000 product IDs from products-0-200000.csv
+2026-06-06 14:10:12,466  MAIN  INFO      Resume: 42517 products already fetched — skipping
+2026-06-06 14:10:12,472  MAIN  INFO      After dedup: 157483 IDs remain to fetch
+2026-06-06 14:10:12,477  MAIN  INFO      Starting  total=157483  workers=3  ~52494 IDs/worker
+2026-06-06 14:10:12,572  MAIN  INFO      Spawned worker 00  (52495 IDs)
+2026-06-06 14:10:15,689  MAIN  INFO      Spawned worker 01  (52494 IDs)
+2026-06-06 14:10:18,818  MAIN  INFO      Spawned worker 02  (52494 IDs)
+2026-06-06 17:09:19,988  MAIN  ERROR     Worker did not report back: 
+2026-06-06 19:09:34,690  MAIN  ERROR     Worker did not report back: 
+2026-06-06 21:09:34,735  MAIN  ERROR     Worker did not report back: 
+2026-06-06 21:10:04,740  MAIN  WARNING   Worker tiki-worker-00 did not exit — terminating
+2026-06-06 21:10:34,743  MAIN  WARNING   Worker tiki-worker-01 did not exit — terminating
+2026-06-06 21:11:04,745  MAIN  WARNING   Worker tiki-worker-02 did not exit — terminating
+2026-06-06 21:11:04,811  MAIN  INFO      Merged error logs → logs/errors.jsonl  (150795 errors total)
+2026-06-06 21:11:04,812  MAIN  INFO      
+╔══════════════════════════════════════════════╗
+║           SCRAPER RUN SUMMARY                ║
+╠══════════════════════════════════════════════╣
+║  Total IDs          : 157483                ║
+║  Successful         : 0                     ║
+║  Errors             : 0                     ║
+║  Batches written    : 0                     ║
+║  Workers used       : 0                     ║
+║  Wall-clock time    : 6:01:36               ║
+║  Effective rate     : 0.0                /s  ║
+╠══════════════════════════════════════════════╣
+╚══════════════════════════════════════════════╝
+2026-06-08 12:23:25,876  MAIN  INFO      Loaded 200000 product IDs from products-0-200000.csv
+2026-06-08 12:23:26,645  MAIN  INFO      Resume: 106517 products already fetched — skipping
+2026-06-08 12:23:26,651  MAIN  INFO      After dedup: 93483 IDs remain to fetch
+2026-06-08 12:23:26,666  MAIN  INFO      Starting  total=93483  workers=3  ~31161 IDs/worker
+2026-06-08 12:23:26,773  MAIN  INFO      Spawned worker 00  (31161 IDs)
+2026-06-08 12:23:29,896  MAIN  INFO      Spawned worker 01  (31161 IDs)
+2026-06-08 12:23:33,029  MAIN  INFO      Spawned worker 02  (31161 IDs)
+2026-06-08 17:29:24,989  MAIN  INFO      Merged error logs → logs/errors.jsonl  (75645 errors total)
+2026-06-08 17:29:24,990  MAIN  INFO      
+╔══════════════════════════════════════════════╗
+║           SCRAPER RUN SUMMARY                ║
+╠══════════════════════════════════════════════╣
+║  Total IDs          : 93483                 ║
+║  Successful         : 17838                 ║
+║  Errors             : 75645                 ║
+║  Batches written    : 126                   ║
+║  Workers used       : 3                     ║
+║  Wall-clock time    : 4:20:14               ║
+║  Effective rate     : 1.1                /s  ║
+╠══════════════════════════════════════════════╣
+║  Worker 00  ok=7008    err=24153      0/s  ║
+║  Worker 01  ok=4357    err=26804      0/s  ║
+║  Worker 02  ok=6473    err=24688      0/s  ║
+╚══════════════════════════════════════════════╝
